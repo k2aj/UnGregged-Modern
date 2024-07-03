@@ -288,8 +288,8 @@ public class MaterialRecipeHandler {
 
         if (material.hasFlag(GENERATE_ROD)) {
             VanillaRecipeHelper.addShapedRecipe(provider, String.format("stick_%s", material.getName()),
-                    ChemicalHelper.get(rod, material),
-                    "f ", " X",
+                    ChemicalHelper.get(rod, material, 3),
+                    "X", "X",
                     'X', new UnificationEntry(ingotPrefix, material));
             if (!material.hasFlag(NO_WORKING)) {
                 EXTRUDER_RECIPES.recipeBuilder("extrude_" + material.getName() + "_to_rod")
@@ -362,7 +362,12 @@ public class MaterialRecipeHandler {
                             .save(provider);
 
                     VanillaRecipeHelper.addShapedRecipe(provider, String.format("plate_%s", material.getName()),
-                            plateStack, "h", "I", "I", 'I', new UnificationEntry(ingotPrefix, material));
+                        ChemicalHelper.get(plate, material, 2), 
+                        "   ",
+                        "   ",
+                        "III", 
+                        'I', new UnificationEntry(ingotPrefix, material)
+                    );
                 }
             }
 
@@ -496,8 +501,8 @@ public class MaterialRecipeHandler {
         if (material.hasFlag(GENERATE_FRAME)) {
             boolean isWoodenFrame = material.hasProperty(PropertyKey.WOOD);
             VanillaRecipeHelper.addShapedRecipe(provider, String.format("frame_%s", material.getName()),
-                    ChemicalHelper.get(framePrefix, material, 2),
-                    "SSS", isWoodenFrame ? "SsS" : "SwS", "SSS",
+                    ChemicalHelper.get(framePrefix, material),
+                    "SS", "SS",
                     'S', new UnificationEntry(rod, material));
 
             ASSEMBLER_RECIPES.recipeBuilder("assemble_" + material.getName() + "_frame")
