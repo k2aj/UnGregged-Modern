@@ -151,13 +151,6 @@ public class GTToolType {
             .sound(GTSoundEntries.WRENCH_TOOL)
             .symbol('w')
             .build();
-    public static final GTToolType FILE = GTToolType.builder("file")
-            .toolTag(TagUtil.createItemTag("tools/files", false))
-            .toolStats(b -> b.crafting().damagePerCraftingAction(4)
-                    .cannotAttack().attackSpeed(-2.4F))
-            .sound(GTSoundEntries.FILE_TOOL)
-            .symbol('f')
-            .build();
     public static final GTToolType CROWBAR = GTToolType.builder("crowbar")
             .toolTag(TagUtil.createItemTag("tools/crowbars", false))
             .harvestTag(TagUtil.createBlockTag("mineable/crowbar", false))

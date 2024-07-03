@@ -635,11 +635,6 @@ public class ToolHelper {
             if (block instanceof WebBlock) return true;
         }
         if (toolClasses.contains(GTToolType.SCYTHE)) {}
-        if (toolClasses.contains(GTToolType.FILE)) {
-            if (block instanceof IronBarsBlock) {
-                return true;
-            }
-        }
         if (toolClasses.contains(GTToolType.CROWBAR)) {
             return block instanceof BaseRailBlock;
         }

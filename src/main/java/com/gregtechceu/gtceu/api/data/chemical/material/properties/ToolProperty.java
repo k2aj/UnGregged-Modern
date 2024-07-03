@@ -185,7 +185,6 @@ public class ToolProperty implements IMaterialProperty<ToolProperty> {
                     HARD_HAMMER,
                     // SOFT_MALLET,
                     WRENCH,
-                    FILE,
                     CROWBAR,
                     SCREWDRIVER,
                     // MORTAR,

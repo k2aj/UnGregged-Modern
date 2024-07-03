@@ -195,11 +195,6 @@ public class ToolRecipeHandler {
                     'I', ingot,
                     'S', stick);
 
-            addToolRecipe(provider, material, GTToolType.FILE, true,
-                    " P ", " P ", " S ",
-                    'P', plate,
-                    'S', stick);
-
             addToolRecipe(provider, material, GTToolType.KNIFE, false,
                     " P ", " S ",
                     'P', plate,
