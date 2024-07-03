@@ -56,7 +56,7 @@ public class ConfigHolder {
         @Configurable
         @Configurable.Comment({ "Whether to remove Block/Ingot compression and decompression in the Crafting Table.",
                 "Default: true" })
-        public boolean disableManualCompression = true; // default true
+        public boolean disableManualCompression = false; // default false
         @Configurable
         @Configurable.Comment({
                 "Change the recipe of Rods in the Lathe to 1 Rod and 2 Small Piles of Dust, instead of 2 Rods.",
