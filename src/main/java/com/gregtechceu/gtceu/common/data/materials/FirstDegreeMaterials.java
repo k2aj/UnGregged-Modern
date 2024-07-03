@@ -124,7 +124,7 @@ public class FirstDegreeMaterials {
                 .buildAndRegister();
 
         Cassiterite = new Material.Builder(GTCEu.id("cassiterite"))
-                .dust(1).ore(2, 1)
+                .dust(1).ore()
                 .color(0x89847e).secondaryColor(0x3b3b35).iconSet(ROUGH)
                 .components(Tin, 1, Oxygen, 2)
                 .buildAndRegister();

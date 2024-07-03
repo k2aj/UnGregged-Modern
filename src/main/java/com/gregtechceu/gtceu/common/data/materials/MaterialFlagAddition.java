@@ -111,8 +111,9 @@ public class MaterialFlagAddition {
         oreProp.setOreByProducts(Calcium, Calcium, Sodalite);
 
         oreProp = Cassiterite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(Tin, Bismuth);
+        oreProp.setOreByProducts(Tin, Bismuth, Zinc);
         oreProp.setDirectSmeltResult(Tin);
+        oreProp.setWashedIn(SodiumPersulfate);
 
         oreProp = CassiteriteSand.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(Tin);
@@ -154,8 +155,9 @@ public class MaterialFlagAddition {
         oreProp.setDirectSmeltResult(Lead);
 
         oreProp = Garnierite.getProperty(PropertyKey.ORE);
-        oreProp.setOreByProducts(Iron, Nickel);
+        oreProp.setOreByProducts(Cobalt, Iron, Platinum);
         oreProp.setDirectSmeltResult(Nickel);
+        oreProp.setWashedIn(Mercury);
 
         oreProp = GreenSapphire.getProperty(PropertyKey.ORE);
         oreProp.setOreByProducts(Aluminium, Sapphire);
