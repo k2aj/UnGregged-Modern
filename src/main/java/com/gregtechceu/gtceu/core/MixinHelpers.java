@@ -238,8 +238,8 @@ public class MixinHelpers {
             ResourceLocation lootTableId = new ResourceLocation(blockEntry.getId().getNamespace(),
                     "blocks/" + blockEntry.getId().getPath());
             LootTable.Builder builder = BLOCK_LOOT
-                    .createSingleItemTable(ChemicalHelper.get(TagPrefix.dustTiny, material).getItem(),
-                            UniformGenerator.between(3, 5))
+                    .createSingleItemTable(ChemicalHelper.get(TagPrefix.rawOre, material).getItem(),
+                            UniformGenerator.between(1, 2))
                     .apply(ApplyBonusCount.addUniformBonusCount(Enchantments.BLOCK_FORTUNE));
             lootTables.put(lootTableId, builder.setParamSet(LootContextParamSets.BLOCK).build());
             ((BlockBehaviourAccessor) blockEntry.get()).setDrops(lootTableId);

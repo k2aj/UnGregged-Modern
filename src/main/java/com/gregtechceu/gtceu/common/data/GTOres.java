@@ -619,7 +619,7 @@ public class GTOres {
                             .layer(l -> l.weight(1).mat(Coal).size(1, 1))
                             .build()))
             .surfaceIndicatorGenerator(indicator -> indicator
-                    .surfaceRock(Diamond)
+                    .surfaceRock(Graphite)
                     .density(0.1f)
                     .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE)
                     .radius(2)));
