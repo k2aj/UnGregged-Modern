@@ -142,51 +142,51 @@ public class ToolRecipeHandler {
         if (material.hasFlag(GENERATE_PLATE)) {
 
             addToolRecipe(provider, material, GTToolType.MINING_HAMMER, true,
-                    "PPf", "PPS", "PPh",
+                    "PP ", "PPS", "PP ",
                     'P', plate,
                     'S', stick);
 
             addToolRecipe(provider, material, GTToolType.SPADE, false,
-                    "fPh", "PSP", " S ",
+                    " P ", "PSP", " S ",
                     'P', plate,
                     'S', stick);
 
             addToolRecipe(provider, material, GTToolType.SAW, false,
-                    "PPS", "fhS",
+                    "PPS", "  S",
                     'P', plate,
                     'S', stick);
 
             addToolRecipe(provider, material, GTToolType.AXE, false,
-                    "PIh", "PS ", "fS ",
+                    "PI ", "PS ", " S ",
                     'P', plate,
                     'I', ingot,
                     'S', stick);
 
             addToolRecipe(provider, material, GTToolType.HOE, false,
-                    "PIh", "fS ", " S ",
+                    "PI ", " S ", " S ",
                     'P', plate,
                     'I', ingot,
                     'S', stick);
 
             addToolRecipe(provider, material, GTToolType.PICKAXE, false,
-                    "PII", "fSh", " S ",
+                    "PII", " S ", " S ",
                     'P', plate,
                     'I', ingot,
                     'S', stick);
 
             addToolRecipe(provider, material, GTToolType.SCYTHE, false,
-                    "PPI", "fSh", " S ",
+                    "PPI", " S ", " S ",
                     'P', plate,
                     'I', ingot,
                     'S', stick);
 
             addToolRecipe(provider, material, GTToolType.SHOVEL, false,
-                    "fPh", " S ", " S ",
+                    " P ", " S ", " S ",
                     'P', plate,
                     'S', stick);
 
             addToolRecipe(provider, material, GTToolType.SWORD, false,
-                    " P ", "fPh", " S ",
+                    " P ", " P ", " S ",
                     'P', plate,
                     'S', stick);
 
@@ -201,12 +201,12 @@ public class ToolRecipeHandler {
                     'S', stick);
 
             addToolRecipe(provider, material, GTToolType.KNIFE, false,
-                    "fPh", " S ",
+                    " P ", " S ",
                     'P', plate,
                     'S', stick);
 
             addToolRecipe(provider, material, GTToolType.WRENCH, false,
-                    "PhP", " P ", " P ",
+                    "P P", " P ", " P ",
                     'P', plate);
         }
 
@@ -215,26 +215,23 @@ public class ToolRecipeHandler {
 
             if (material.hasFlag(GENERATE_PLATE)) {
                 addToolRecipe(provider, material, GTToolType.BUTCHERY_KNIFE, false,
-                        "PPf", "PP ", "Sh ",
+                        "PP", "PP", "S ",
                         'P', plate,
                         'S', rod);
 
-                if (material.hasFlag(GENERATE_BOLT_SCREW)) {
-                    addToolRecipe(provider, material, GTToolType.WIRE_CUTTER, false,
-                            "PfP", "hPd", "STS",
-                            'P', plate,
-                            'T', new UnificationEntry(TagPrefix.screw, material),
-                            'S', rod);
-                }
+                addToolRecipe(provider, material, GTToolType.WIRE_CUTTER, false,
+                        "P P", " P ", "S S",
+                        'P', plate,
+                        'S', rod);
             }
 
             addToolRecipe(provider, material, GTToolType.SCREWDRIVER, true,
-                    " fS", " Sh", "W  ",
+                    "  S", " S ", "W  ",
                     'S', rod,
                     'W', stick);
 
             addDyeableToolRecipe(provider, material, GTToolType.CROWBAR, true,
-                    "hDS", "DSD", "SDf",
+                    " DS", "DSD", "SD ",
                     'S', rod);
         }
     }
@@ -268,7 +265,7 @@ public class ToolRecipeHandler {
                 toolPrefix = TagPrefix.toolHeadChainsaw;
                 VanillaRecipeHelper.addShapedRecipe(provider, String.format("chainsaw_head_%s", material.getName()),
                         ChemicalHelper.get(toolPrefix, material),
-                        "SRS", "XhX", "SRS",
+                        "SRS", "X X", "SRS",
                         'X', plate,
                         'S', steelPlate,
                         'R', steelRing);
@@ -285,7 +282,7 @@ public class ToolRecipeHandler {
 
                 VanillaRecipeHelper.addShapedRecipe(provider, String.format("wrench_head_%s", material.getName()),
                         ChemicalHelper.get(toolPrefix, material),
-                        "hXW", "XRX", "WXd",
+                        " XW", "XRX", "WX ",
                         'X', plate,
                         'R', steelRing,
                         'W', new UnificationEntry(TagPrefix.screw, GTMaterials.Steel));
@@ -298,7 +295,7 @@ public class ToolRecipeHandler {
 
                 VanillaRecipeHelper.addShapedRecipe(provider, String.format("buzzsaw_blade_%s", material.getName()),
                         ChemicalHelper.get(toolPrefix, material),
-                        "sXh", "X X", "fXx",
+                        " X ", "X X", " X ",
                         'X', plate);
 
                 if (material.hasFlag(GENERATE_GEAR)) {
@@ -320,7 +317,7 @@ public class ToolRecipeHandler {
 
                 VanillaRecipeHelper.addShapedRecipe(provider, String.format("screwdriver_tip_%s", material.getName()),
                         ChemicalHelper.get(toolPrefix, material),
-                        "fR", " h",
+                        "R",
                         'R', new UnificationEntry(TagPrefix.rodLong, material));
             }
         }
@@ -340,7 +337,7 @@ public class ToolRecipeHandler {
                     String.format("%s_%s", material.getName(), toolType.name),
                     Ingredient.of(powerUnitStack),
                     tool,
-                    "wHd", " U ",
+                    "H", "U",
                     'H', new UnificationEntry(toolHead, material),
                     'U', powerUnitStack);
         }
@@ -474,7 +471,7 @@ public class ToolRecipeHandler {
 
                 VanillaRecipeHelper.addShapedRecipe(provider, String.format("plunger_%s", material.getName()),
                         ToolHelper.getAndSetToolData(GTToolType.PLUNGER, material, 128 * (i << 1), 1, 4F, 0F),
-                        "xPP", " SP", "S f",
+                        " PP", " SP", "S  ",
                         'P', new UnificationEntry(TagPrefix.plate, material),
                         'S', rod);
             }
@@ -497,8 +494,8 @@ public class ToolRecipeHandler {
             VanillaRecipeHelper.addShapedEnergyTransferRecipe(provider, true, false, true,
                     "lv_magnet_" + batteryItem.getId().getPath(),
                     Ingredient.of(batteryItem), GTItems.ITEM_MAGNET_LV.asStack(),
-                    "MwM", "MBM", "CPC",
-                    'M', new UnificationEntry(rod, GTMaterials.SteelMagnetic),
+                    "M M", "MBM", "CPC",
+                    'M', new UnificationEntry(rod, GTMaterials.Steel),
                     'P', new UnificationEntry(plate, GTMaterials.Steel),
                     'C', new UnificationEntry(cableGtSingle, GTMaterials.Tin),
                     'B', batteryItem.asStack());
@@ -532,8 +529,8 @@ public class ToolRecipeHandler {
             VanillaRecipeHelper.addShapedEnergyTransferRecipe(provider, true, false, true,
                     "hv_magnet_" + batteryItem.getId().getPath(),
                     Ingredient.of(batteryItem), GTItems.ITEM_MAGNET_HV.asStack(),
-                    "MwM", "MBM", "CPC",
-                    'M', new UnificationEntry(rod, GTMaterials.NeodymiumMagnetic),
+                    "M M", "MBM", "CPC",
+                    'M', new UnificationEntry(rod, GTMaterials.Neodymium),
                     'P', new UnificationEntry(plate, GTMaterials.StainlessSteel),
                     'C', new UnificationEntry(cableGtSingle, GTMaterials.Gold),
                     'B', batteryItem.asStack());
