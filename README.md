@@ -2,9 +2,10 @@
 
 Fork of [GregTechCEu Modern](https://github.com/GregTechCEu/GregTech-Modern) aiming for a more enjoyable player experience.
 
-## Changes from GregTechCEU Modern
+## Current changes from GregTechCEU Modern
 
-(coming soon)
+- Crafting tools (hammers, files, wire cutters, etc.) are no longer needed in most recipes.
+- Some redundant ores were removed to reduce inventory clutter.
 
 ## Branch structure
 
