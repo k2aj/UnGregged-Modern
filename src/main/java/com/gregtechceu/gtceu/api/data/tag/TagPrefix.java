@@ -88,7 +88,7 @@ public class TagPrefix {
             .registerOre(
                     Blocks.STONE::defaultBlockState, () -> GTMaterials.Stone, BlockBehaviour.Properties.of()
                             .mapColor(MapColor.STONE).requiresCorrectToolForDrops().strength(3.0F, 3.0F),
-                    new ResourceLocation("block/stone"), false, false, true);
+                    new ResourceLocation("block/stone"), false, false, false);
 
     public static final TagPrefix oreGranite = oreTagPrefix("granite", BlockTags.MINEABLE_WITH_PICKAXE)
             .langValue("Granite %s Ore")
@@ -130,7 +130,7 @@ public class TagPrefix {
             .registerOre(
                     Blocks.DEEPSLATE::defaultBlockState, () -> GTMaterials.Deepslate, BlockBehaviour.Properties.of()
                             .mapColor(MapColor.DEEPSLATE).requiresCorrectToolForDrops().strength(4.5F, 3.0F),
-                    new ResourceLocation("block/deepslate"), false, false, true);
+                    new ResourceLocation("block/deepslate"), false, false, false);
 
     // TODO figure out a composition for tuff
     public static final TagPrefix oreTuff = oreTagPrefix("tuff", BlockTags.MINEABLE_WITH_PICKAXE)
@@ -174,7 +174,7 @@ public class TagPrefix {
             .registerOre(Blocks.NETHERRACK::defaultBlockState, () -> GTMaterials.Netherrack,
                     BlockBehaviour.Properties.of().mapColor(MapColor.NETHER).instrument(NoteBlockInstrument.BASEDRUM)
                             .requiresCorrectToolForDrops().strength(3.0F, 3.0F).sound(SoundType.NETHER_ORE),
-                    new ResourceLocation("block/netherrack"), true, false, true);
+                    new ResourceLocation("block/netherrack"), true, false, false);
 
     // TODO figure out a composition for blackstone
     public static final TagPrefix oreBlackstone = oreTagPrefix("blackstone", BlockTags.MINEABLE_WITH_PICKAXE)
@@ -190,7 +190,7 @@ public class TagPrefix {
             .registerOre(Blocks.END_STONE::defaultBlockState, () -> GTMaterials.Endstone,
                     BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASEDRUM)
                             .requiresCorrectToolForDrops().strength(4.5F, 9.0F),
-                    new ResourceLocation("block/end_stone"), true, false, true);
+                    new ResourceLocation("block/end_stone"), true, false, false);
 
     public static final TagPrefix rawOre = new TagPrefix("raw", true)
             .idPattern("raw_%s")
