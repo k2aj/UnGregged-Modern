@@ -475,7 +475,7 @@ public class ComponentRecipes {
         // Voiding Covers Start-----------------------------------------------------------------------------------------
 
         VanillaRecipeHelper.addShapedRecipe(provider, true, "cover_item_voiding", COVER_ITEM_VOIDING.asStack(), "SDS",
-                "dPw", " E ", 'S', new UnificationEntry(screw, Steel), 'D', COVER_ITEM_DETECTOR.asStack(), 'P',
+                " P ", " E ", 'S', new UnificationEntry(screw, Steel), 'D', COVER_ITEM_DETECTOR.asStack(), 'P',
                 new UnificationEntry(pipeNormalItem, Brass), 'E', Items.ENDER_PEARL);
 
         ASSEMBLER_RECIPES.recipeBuilder("cover_item_voiding")
@@ -493,7 +493,7 @@ public class ComponentRecipes {
                 .duration(100).EUt(VA[LV]).save(provider);
 
         VanillaRecipeHelper.addShapedRecipe(provider, true, "cover_fluid_voiding", COVER_FLUID_VOIDING.asStack(), "SDS",
-                "dPw", " E ", 'S', new UnificationEntry(screw, Steel), 'D', COVER_FLUID_DETECTOR.asStack(), 'P',
+                " P ", " E ", 'S', new UnificationEntry(screw, Steel), 'D', COVER_FLUID_DETECTOR.asStack(), 'P',
                 new UnificationEntry(pipeNormalFluid, Bronze), 'E', Items.ENDER_PEARL);
 
         ASSEMBLER_RECIPES.recipeBuilder("cover_fluid_voiding")

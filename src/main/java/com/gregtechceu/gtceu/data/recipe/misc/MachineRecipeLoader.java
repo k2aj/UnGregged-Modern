@@ -1373,11 +1373,11 @@ public class MachineRecipeLoader {
                 VanillaRecipeHelper.addShapedRecipe(provider,
                         "fluid_hatch_output_to_input_" + FLUID_IMPORT_HATCH[i].getTier(),
                         FLUID_IMPORT_HATCH[i].asStack(),
-                        "d", "B", 'B', FLUID_EXPORT_HATCH[i].asStack());
+                        "B", 'B', FLUID_EXPORT_HATCH[i].asStack());
                 VanillaRecipeHelper.addShapedRecipe(provider,
                         "fluid_hatch_input_to_output_" + FLUID_EXPORT_HATCH[i].getTier(),
                         FLUID_EXPORT_HATCH[i].asStack(),
-                        "d", "B", 'B', FLUID_IMPORT_HATCH[i].asStack());
+                        "B", 'B', FLUID_IMPORT_HATCH[i].asStack());
             }
         }
         for (int i = 0; i < ITEM_IMPORT_BUS.length; i++) {
@@ -1385,10 +1385,10 @@ public class MachineRecipeLoader {
 
                 VanillaRecipeHelper.addShapedRecipe(provider,
                         "item_bus_output_to_input_" + ITEM_IMPORT_BUS[i].getTier(), ITEM_IMPORT_BUS[i].asStack(),
-                        "d", "B", 'B', ITEM_EXPORT_BUS[i].asStack());
+                        "B", 'B', ITEM_EXPORT_BUS[i].asStack());
                 VanillaRecipeHelper.addShapedRecipe(provider,
                         "item_bus_input_to_output_" + ITEM_EXPORT_BUS[i].getTier(), ITEM_EXPORT_BUS[i].asStack(),
-                        "d", "B", 'B', ITEM_IMPORT_BUS[i].asStack());
+                        "B", 'B', ITEM_IMPORT_BUS[i].asStack());
             }
         }
 
@@ -1402,28 +1402,28 @@ public class MachineRecipeLoader {
 
             VanillaRecipeHelper.addShapedRecipe(
                     provider, "fluid_hatch_4x_output_to_input_" + tierName,
-                    importHatch4x.asStack(), "d", "B",
+                    importHatch4x.asStack(), "B",
                     'B', exportHatch4x.asStack());
             VanillaRecipeHelper.addShapedRecipe(
                     provider, "fluid_hatch_4x_input_to_output_" + tierName,
-                    exportHatch4x.asStack(), "d", "B",
+                    exportHatch4x.asStack(), "B",
                     'B', importHatch4x.asStack());
 
             VanillaRecipeHelper.addShapedRecipe(
                     provider, "fluid_hatch_9x_output_to_input_" + tierName,
-                    importHatch9x.asStack(), "d", "B",
+                    importHatch9x.asStack(), "B",
                     'B', exportHatch9x.asStack());
             VanillaRecipeHelper.addShapedRecipe(
                     provider, "fluid_hatch_9x_input_to_output_" + tierName,
-                    exportHatch9x.asStack(), "d", "B",
+                    exportHatch9x.asStack(), "B",
                     'B', importHatch9x.asStack());
         }
 
         // Steam
         VanillaRecipeHelper.addShapedRecipe(provider, "steam_bus_output_to_input", STEAM_EXPORT_BUS.asStack(),
-                "d", "B", 'B', STEAM_IMPORT_BUS.asStack());
+                "B", 'B', STEAM_IMPORT_BUS.asStack());
         VanillaRecipeHelper.addShapedRecipe(provider, "steam_bus_input_to_output", STEAM_IMPORT_BUS.asStack(),
-                "d", "B", 'B', STEAM_EXPORT_BUS.asStack());
+                "B", 'B', STEAM_EXPORT_BUS.asStack());
 
         // TODO fix the ME buses/hatches
         // if (GTCEu.isAE2Loaded()) {

@@ -73,7 +73,7 @@ public class PipeRecipeHandler {
 
         VanillaRecipeHelper.addShapedRecipe(provider,
                 FormattingUtil.toLowerCaseUnder(pipePrefix.toString() + "_" + material.getName()),
-                ChemicalHelper.get(pipePrefix, material), "PR", "Rh",
+                ChemicalHelper.get(pipePrefix, material), "RPR",
                 'P', new UnificationEntry(unrestrictive, material), 'R', ChemicalHelper.get(ring, Iron));
     }
 
@@ -99,7 +99,10 @@ public class PipeRecipeHandler {
                     .save(provider);
         } else {
             VanillaRecipeHelper.addShapedRecipe(provider, String.format("tiny_%s_pipe", material.getName()),
-                    GTUtil.copyAmount(2, pipeStack), " s ", "hXw",
+                    GTUtil.copyAmount(6, pipeStack), 
+                    "X",
+                    "X",
+                    "X",
                     'X', new UnificationEntry(plate, material));
         }
     }
@@ -126,7 +129,10 @@ public class PipeRecipeHandler {
                     .save(provider);
         } else {
             VanillaRecipeHelper.addShapedRecipe(provider, String.format("small_%s_pipe", material.getName()),
-                    pipeStack, "wXh",
+                    GTUtil.copyAmount(6, pipeStack), 
+                    "X X", 
+                    "X X", 
+                    "X X",
                     'X', new UnificationEntry(plate, material));
         }
     }
@@ -153,7 +159,7 @@ public class PipeRecipeHandler {
                     .save(provider);
         } else {
             VanillaRecipeHelper.addShapedRecipe(provider, String.format("medium_%s_pipe", material.getName()),
-                    pipeStack, "XXX", "w h",
+                    pipeStack, "XXX",
                     'X', new UnificationEntry(plate, material));
         }
     }
@@ -180,7 +186,7 @@ public class PipeRecipeHandler {
                     .save(provider);
         } else {
             VanillaRecipeHelper.addShapedRecipe(provider, String.format("large_%s_pipe", material.getName()),
-                    pipeStack, "XXX", "w h", "XXX",
+                    pipeStack, "XXX", "   ", "XXX",
                     'X', new UnificationEntry(plate, material));
         }
     }
@@ -207,7 +213,7 @@ public class PipeRecipeHandler {
                     .save(provider);
         } else if (plateDouble.doGenerateItem(material)) {
             VanillaRecipeHelper.addShapedRecipe(provider, String.format("huge_%s_pipe", material.getName()),
-                    pipeStack, "XXX", "w h", "XXX",
+                    pipeStack, "XXX", "   ", "XXX",
                     'X', new UnificationEntry(plateDouble, material));
         }
     }

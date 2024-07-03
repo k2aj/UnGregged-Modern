@@ -770,7 +770,7 @@ public class VanillaStandardRecipes {
                 .duration(100).EUt(4)
                 .save(provider);
 
-        VanillaRecipeHelper.addShapedRecipe(provider, "iron_horse_armor", new ItemStack(Items.IRON_HORSE_ARMOR), "hdH",
+        VanillaRecipeHelper.addShapedRecipe(provider, "iron_horse_armor", new ItemStack(Items.IRON_HORSE_ARMOR), "  H",
                 "PCP", "LSL",
                 'H', new ItemStack(Items.IRON_HELMET),
                 'P', new UnificationEntry(plate, Iron),
@@ -779,7 +779,7 @@ public class VanillaStandardRecipes {
                 'S', new UnificationEntry(screw, Iron));
 
         VanillaRecipeHelper.addShapedRecipe(provider, "golden_horse_armor", new ItemStack(Items.GOLDEN_HORSE_ARMOR),
-                "hdH", "PCP", "LSL",
+                "  H", "PCP", "LSL",
                 'H', new ItemStack(Items.GOLDEN_HELMET),
                 'P', new UnificationEntry(plate, Gold),
                 'C', new ItemStack(Items.GOLDEN_CHESTPLATE),
@@ -787,7 +787,7 @@ public class VanillaStandardRecipes {
                 'S', new UnificationEntry(screw, Gold));
 
         VanillaRecipeHelper.addShapedRecipe(provider, "diamond_horse_armor", new ItemStack(Items.DIAMOND_HORSE_ARMOR),
-                "hdH", "PCP", "LSL",
+                "  H", "PCP", "LSL",
                 'H', new ItemStack(Items.DIAMOND_HELMET),
                 'P', new UnificationEntry(plate, Diamond),
                 'C', new ItemStack(Items.DIAMOND_CHESTPLATE),
@@ -795,19 +795,19 @@ public class VanillaStandardRecipes {
                 'S', new UnificationEntry(bolt, Diamond));
 
         VanillaRecipeHelper.addShapedRecipe(provider, "chainmail_helmet", new ItemStack(Items.CHAINMAIL_HELMET), "PPP",
-                "PhP",
+                "P P",
                 'P', new UnificationEntry(ring, Iron));
 
         VanillaRecipeHelper.addShapedRecipe(provider, "chainmail_chestplate", new ItemStack(Items.CHAINMAIL_CHESTPLATE),
-                "PhP", "PPP", "PPP",
+                "P P", "PPP", "PPP",
                 'P', new UnificationEntry(ring, Iron));
 
         VanillaRecipeHelper.addShapedRecipe(provider, "chainmail_leggings", new ItemStack(Items.CHAINMAIL_LEGGINGS),
-                "PPP", "PhP", "P P",
+                "PPP", "P P", "P P",
                 'P', new UnificationEntry(ring, Iron));
 
         VanillaRecipeHelper.addShapedRecipe(provider, "chainmail_boots", new ItemStack(Items.CHAINMAIL_BOOTS), "P P",
-                "PhP",
+                "P P",
                 'P', new UnificationEntry(ring, Iron));
 
         ASSEMBLER_RECIPES.recipeBuilder("cauldron")

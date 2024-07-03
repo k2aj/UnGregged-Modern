@@ -27,20 +27,25 @@ public class CraftingRecipeLoader {
         // todo facades
         // registerFacadeRecipe(provider, Iron, 4);
 
-        VanillaRecipeHelper.addShapedRecipe(provider, "small_wooden_pipe", ChemicalHelper.get(pipeSmallFluid, Wood),
-                "sWr", 'W', ItemTags.PLANKS);
-        VanillaRecipeHelper.addShapedRecipe(provider, "normal_wooden_pipe", ChemicalHelper.get(pipeNormalFluid, Wood),
-                "WWW", "s r", 'W', ItemTags.PLANKS);
+        VanillaRecipeHelper.addShapedRecipe(provider, "small_wooden_pipe", ChemicalHelper.get(pipeSmallFluid, Wood, 3),
+                "W",
+                "W",
+                "W", 
+                'W', ItemTags.PLANKS);
+        VanillaRecipeHelper.addShapedRecipe(provider, "normal_wooden_pipe", ChemicalHelper.get(pipeNormalFluid, Wood, 2),
+                "W W",
+                "W W",
+                "W W", 'W', ItemTags.PLANKS);
         VanillaRecipeHelper.addShapedRecipe(provider, "large_wooden_pipe", ChemicalHelper.get(pipeLargeFluid, Wood),
-                "WWW", "s r", "WWW", 'W', ItemTags.PLANKS);
+                "WWW", "   ", "WWW", 'W', ItemTags.PLANKS);
 
         VanillaRecipeHelper.addShapedRecipe(provider, "small_treated_wooden_pipe",
-                ChemicalHelper.get(pipeSmallFluid, TreatedWood), "sWr", 'W', GTBlocks.TREATED_WOOD_PLANK.asStack());
+                ChemicalHelper.get(pipeSmallFluid, TreatedWood, 3), "W", "W", "W", 'W', GTBlocks.TREATED_WOOD_PLANK.asStack());
         VanillaRecipeHelper.addShapedRecipe(provider, "normal_treated_wooden_pipe",
-                ChemicalHelper.get(pipeNormalFluid, TreatedWood), "WWW", "s r", 'W',
+                ChemicalHelper.get(pipeNormalFluid, TreatedWood, 2), "W W", "W W", "W W", 'W',
                 GTBlocks.TREATED_WOOD_PLANK.asStack());
         VanillaRecipeHelper.addShapedRecipe(provider, "large_treated_wooden_pipe",
-                ChemicalHelper.get(pipeLargeFluid, TreatedWood), "WWW", "s r", "WWW", 'W',
+                ChemicalHelper.get(pipeLargeFluid, TreatedWood), "WWW", "   ", "WWW", 'W',
                 GTBlocks.TREATED_WOOD_PLANK.asStack());
 
         VanillaRecipeHelper.addShapelessRecipe(provider, "integrated_circuit", INTEGRATED_CIRCUIT.asStack(),
@@ -96,12 +101,12 @@ public class CraftingRecipeLoader {
         VanillaRecipeHelper.addShapedRecipe(provider, "treated_wood_planks", GTBlocks.TREATED_WOOD_PLANK.asStack(8),
                 "PPP", "PBP", "PPP", 'P', ItemTags.PLANKS, 'B', Creosote.getBucket());
 
-        VanillaRecipeHelper.addShapedRecipe(provider, "rubber_ring", ChemicalHelper.get(ring, Rubber), "k", "X", 'X',
+        VanillaRecipeHelper.addShapedRecipe(provider, "rubber_ring", ChemicalHelper.get(ring, Rubber, 4), " X ", "X X", " X ", 'X',
                 new UnificationEntry(plate, Rubber));
-        VanillaRecipeHelper.addShapedRecipe(provider, "silicone_rubber_ring", ChemicalHelper.get(ring, SiliconeRubber),
-                "k", "P", 'P', ChemicalHelper.get(plate, SiliconeRubber));
+        VanillaRecipeHelper.addShapedRecipe(provider, "silicone_rubber_ring", ChemicalHelper.get(ring, SiliconeRubber, 4),
+                " P ", "P P", " P ", 'P', ChemicalHelper.get(plate, SiliconeRubber));
         VanillaRecipeHelper.addShapedRecipe(provider, "styrene_rubber_ring",
-                ChemicalHelper.get(ring, StyreneButadieneRubber), "k", "P", 'P',
+                ChemicalHelper.get(ring, StyreneButadieneRubber, 4), " P ", "P P", " P ", 'P',
                 ChemicalHelper.get(plate, StyreneButadieneRubber));
 
         VanillaRecipeHelper.addShapelessRecipe(provider, "iron_magnetic_stick", ChemicalHelper.get(rod, IronMagnetic),
@@ -116,10 +121,10 @@ public class CraftingRecipeLoader {
                 COMPONENT_GRINDER_TUNGSTEN.asStack(), "WSW", "SDS", "WSW", 'W', new UnificationEntry(plate, Tungsten),
                 'S', new UnificationEntry(plateDouble, VanadiumSteel), 'D', new UnificationEntry(gem, Diamond));
 
-        VanillaRecipeHelper.addShapedRecipe(provider, "minecart_wheels_iron", IRON_MINECART_WHEELS.asStack(), " h ",
-                "RSR", " w ", 'R', new UnificationEntry(ring, Iron), 'S', new UnificationEntry(rod, Iron));
-        VanillaRecipeHelper.addShapedRecipe(provider, "minecart_wheels_steel", STEEL_MINECART_WHEELS.asStack(), " h ",
-                "RSR", " w ", 'R', new UnificationEntry(ring, Steel), 'S', new UnificationEntry(rod, Steel));
+        VanillaRecipeHelper.addShapedRecipe(provider, "minecart_wheels_iron", IRON_MINECART_WHEELS.asStack(),
+                "RSR", 'R', new UnificationEntry(ring, Iron), 'S', new UnificationEntry(rod, Iron));
+        VanillaRecipeHelper.addShapedRecipe(provider, "minecart_wheels_steel", STEEL_MINECART_WHEELS.asStack(),
+                "RSR", 'R', new UnificationEntry(ring, Steel), 'S', new UnificationEntry(rod, Steel));
 
         VanillaRecipeHelper.addShapedRecipe(provider, "nano_saber", NANO_SABER.asStack(), "PIC", "PIC",
                 "XEX", 'P', new UnificationEntry(plate, Platinum), 'I', new UnificationEntry(plate, Ruridit), 'C',
@@ -159,7 +164,7 @@ public class CraftingRecipeLoader {
         ///////////////////////////////////////////////////
         // Shapes and Molds //
         ///////////////////////////////////////////////////
-        VanillaRecipeHelper.addShapedRecipe(provider, "shape_empty", SHAPE_EMPTY.asStack(), "hf", "PP", "PP", 'P',
+        VanillaRecipeHelper.addShapedRecipe(provider, "shape_empty", SHAPE_EMPTY.asStack(), "PP", "PP", 'P',
                 new UnificationEntry(plate, Steel));
 
         VanillaRecipeHelper.addStrictShapedRecipe(provider, "shape_extruder_bottle", SHAPE_EXTRUDER_BOTTLE.asStack(),
@@ -279,32 +284,32 @@ public class CraftingRecipeLoader {
         // Armors //
         ///////////////////////////////////////////////////
         VanillaRecipeHelper.addShapedRecipe(provider, "nightvision_goggles", GTItems.NIGHTVISION_GOGGLES.asStack(),
-                "CSC", "RBR", "LdL", 'C', CustomTags.ULV_CIRCUITS, 'S', new UnificationEntry(screw, Steel), 'R',
+                "CSC", "RBR", "L L", 'C', CustomTags.ULV_CIRCUITS, 'S', new UnificationEntry(screw, Steel), 'R',
                 new UnificationEntry(ring, Rubber), 'B', GTItems.BATTERY_LV_SODIUM, 'L',
                 new UnificationEntry(lens, Glass));
-        VanillaRecipeHelper.addShapedRecipe(provider, "fluid_jetpack", GTItems.LIQUID_FUEL_JETPACK.asStack(), "xCw",
+        VanillaRecipeHelper.addShapedRecipe(provider, "fluid_jetpack", GTItems.LIQUID_FUEL_JETPACK.asStack(), " C ",
                 "SUS", "RIR", 'C', CustomTags.LV_CIRCUITS, 'S', GTItems.FLUID_CELL_LARGE_STEEL.asStack(), 'U',
                 GTItems.ELECTRIC_PUMP_LV.asStack(), 'R', new UnificationEntry(rotor, Lead), 'I',
                 new UnificationEntry(pipeSmallFluid, Potin));
-        VanillaRecipeHelper.addShapedRecipe(provider, "electric_jetpack", GTItems.ELECTRIC_JETPACK.asStack(), "xCd",
+        VanillaRecipeHelper.addShapedRecipe(provider, "electric_jetpack", GTItems.ELECTRIC_JETPACK.asStack(), " C ",
                 "TBT", "I I", 'C', CustomTags.MV_CIRCUITS, 'T', GTItems.POWER_THRUSTER.asStack(), 'B',
                 GTItems.BATTERY_MV_LITHIUM.asStack(), 'I', new UnificationEntry(wireGtDouble, AnnealedCopper));
         VanillaRecipeHelper.addShapedRecipe(provider, "electric_jetpack_advanced",
-                GTItems.ELECTRIC_JETPACK_ADVANCED.asStack(), "xJd", "TBT", "WCW", 'J',
+                GTItems.ELECTRIC_JETPACK_ADVANCED.asStack(), " J ", "TBT", "WCW", 'J',
                 GTItems.ELECTRIC_JETPACK.asStack(), 'T', GTItems.POWER_THRUSTER_ADVANCED.asStack(), 'B',
                 ENERGIUM_CRYSTAL.asStack(), 'W', new UnificationEntry(wireGtQuadruple, Gold), 'C',
                 CustomTags.HV_CIRCUITS);
-        VanillaRecipeHelper.addShapedRecipe(provider, "nano_helmet", GTItems.NANO_HELMET.asStack(), "PPP", "PNP", "xEd",
+        VanillaRecipeHelper.addShapedRecipe(provider, "nano_helmet", GTItems.NANO_HELMET.asStack(), "PPP", "PNP", " E ",
                 'P', GTItems.CARBON_FIBER_PLATE.asStack(), 'N', GTItems.NIGHTVISION_GOGGLES.asStack(), 'E',
                 GTItems.ENERGIUM_CRYSTAL.asStack());
         VanillaRecipeHelper.addShapedRecipe(provider, "nano_chestplate", GTItems.NANO_CHESTPLATE.asStack(), "PEP",
                 "PPP", "PPP", 'P', GTItems.CARBON_FIBER_PLATE.asStack(), 'E', GTItems.ENERGIUM_CRYSTAL.asStack());
         VanillaRecipeHelper.addShapedRecipe(provider, "nano_leggings", GTItems.NANO_LEGGINGS.asStack(), "PPP", "PEP",
-                "PxP", 'P', GTItems.CARBON_FIBER_PLATE.asStack(), 'E', GTItems.ENERGIUM_CRYSTAL.asStack());
-        VanillaRecipeHelper.addShapedRecipe(provider, "nano_boots", GTItems.NANO_BOOTS.asStack(), "PxP", "PEP", 'P',
+                "P P", 'P', GTItems.CARBON_FIBER_PLATE.asStack(), 'E', GTItems.ENERGIUM_CRYSTAL.asStack());
+        VanillaRecipeHelper.addShapedRecipe(provider, "nano_boots", GTItems.NANO_BOOTS.asStack(), "P P", "PEP", 'P',
                 GTItems.CARBON_FIBER_PLATE.asStack(), 'E', GTItems.ENERGIUM_CRYSTAL.asStack());
         VanillaRecipeHelper.addShapedRecipe(provider, "nano_chestplate_advanced",
-                GTItems.NANO_CHESTPLATE_ADVANCED.asStack(), "xJd", "PNP", "WCW", 'J',
+                GTItems.NANO_CHESTPLATE_ADVANCED.asStack(), " J ", "PNP", "WCW", 'J',
                 GTItems.ELECTRIC_JETPACK_ADVANCED.asStack(), 'P', GTItems.LOW_POWER_INTEGRATED_CIRCUIT.asStack(), 'N',
                 GTItems.NANO_CHESTPLATE.asStack(), 'W', new UnificationEntry(wireGtQuadruple, Platinum), 'C',
                 CustomTags.IV_CIRCUITS);

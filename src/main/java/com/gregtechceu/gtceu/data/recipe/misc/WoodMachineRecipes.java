@@ -261,9 +261,9 @@ public class WoodMachineRecipes {
      */
     private static void registerWoodRecipes(Consumer<FinishedRecipe> provider) {
         if (ConfigHolder.INSTANCE.recipes.nerfWoodCrafting) {
-            VanillaRecipeHelper.addShapedRecipe(provider, "stick_saw", new ItemStack(Items.STICK, 4), "s", "P", "P",
-                    'P', ItemTags.PLANKS);
-            VanillaRecipeHelper.addShapedRecipe(provider, "stick_normal", new ItemStack(Items.STICK, 2), "P", "P", 'P',
+            //VanillaRecipeHelper.addShapedRecipe(provider, "stick_saw", new ItemStack(Items.STICK, 4), "s", "P", "P",
+            //        'P', ItemTags.PLANKS);
+            VanillaRecipeHelper.addShapedRecipe(provider, "stick_normal", new ItemStack(Items.STICK, 3), "P", "P", 'P',
                     ItemTags.PLANKS);
         }
 
