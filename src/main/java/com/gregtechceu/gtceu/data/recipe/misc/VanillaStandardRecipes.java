@@ -115,8 +115,8 @@ public class VanillaStandardRecipes {
      * - Removes some glass related recipes based on configs
      */
     private static void glassRecipes(Consumer<FinishedRecipe> provider) {
-        VanillaRecipeHelper.addShapedRecipe(provider, "glass_dust_hammer", ChemicalHelper.get(dust, Glass), "hG", 'G',
-                new ItemStack(Blocks.GLASS));
+        /*VanillaRecipeHelper.addShapedRecipe(provider, "glass_dust_hammer", ChemicalHelper.get(dust, Glass), "hG", 'G',
+                new ItemStack(Blocks.GLASS));*/ //No, this is dumb
 
         VanillaRecipeHelper.addShapedRecipe(provider, "quartz_sand", ChemicalHelper.get(dust, QuartzSand), "S", "m",
                 'S', new ItemStack(Blocks.SAND));
@@ -193,10 +193,7 @@ public class VanillaStandardRecipes {
         // .outputItems(new ItemStack(Blocks.STAINED_GLASS_PANE, 8, i))
         // .save(provider);
         // }
-
-        VanillaRecipeHelper.addShapedRecipe(provider, "glass_pane", new ItemStack(Blocks.GLASS_PANE, 2), "sG", 'G',
-                new ItemStack(Blocks.GLASS));
-
+        
         CUTTER_RECIPES.recipeBuilder("cut_glass_panes").duration(50).EUt(VA[ULV])
                 .inputItems(new ItemStack(Blocks.GLASS, 3))
                 .outputItems(new ItemStack(Blocks.GLASS_PANE, 8))
@@ -207,10 +204,13 @@ public class VanillaStandardRecipes {
      * Adds smashing related recipes for vanilla blocks and items
      */
     private static void smashingRecipes(Consumer<FinishedRecipe> provider) {
-        VanillaRecipeHelper.addShapedRecipe(provider, "cobblestone_hammer", new ItemStack(Blocks.COBBLESTONE), "h", "C",
+
+        // No. Just no. The hammer recipes are pointless. No one in their right mind is ever going to use any of these.
+
+        /*VanillaRecipeHelper.addShapedRecipe(provider, "cobblestone_hammer", new ItemStack(Blocks.COBBLESTONE), "h", "C",
                 'C', new ItemStack(Blocks.STONE));
         VanillaRecipeHelper.addShapedRecipe(provider, "cobbled_deepslate_hammer",
-                new ItemStack(Blocks.COBBLED_DEEPSLATE), "h", "C", 'C', new ItemStack(Blocks.DEEPSLATE));
+                new ItemStack(Blocks.COBBLED_DEEPSLATE), "h", "C", 'C', new ItemStack(Blocks.DEEPSLATE));*/
 
         FORGE_HAMMER_RECIPES.recipeBuilder("stone_to_cobblestone")
                 .inputItems(new ItemStack(Blocks.STONE))

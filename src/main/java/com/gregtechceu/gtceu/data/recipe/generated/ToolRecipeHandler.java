@@ -121,7 +121,7 @@ public class ToolRecipeHandler {
 
                     VanillaRecipeHelper.addShapedEnergyTransferRecipe(provider, true, false, true, recipeName,
                             Ingredient.of(batteryStack), powerUnitStack,
-                            "S d", "GMG", "PBP",
+                            "SGS", "GMG", "PBP",
                             'M', motorItems.get(tier).asStack(),
                             'S', new UnificationEntry(screw, baseMaterials.get(tier)),
                             'P', new UnificationEntry(plate, baseMaterials.get(tier)),
@@ -252,7 +252,7 @@ public class ToolRecipeHandler {
                 toolPrefix = TagPrefix.toolHeadDrill;
                 VanillaRecipeHelper.addShapedRecipe(provider, String.format("drill_head_%s", material.getName()),
                         ChemicalHelper.get(toolPrefix, material),
-                        "XSX", "XSX", "ShS",
+                        "XSX", "XSX", "SSS",
                         'X', plate,
                         'S', steelPlate);
 

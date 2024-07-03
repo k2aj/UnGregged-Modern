@@ -222,28 +222,28 @@ public class ComponentRecipes {
             // Pumps
             // Start---------------------------------------------------------------------------------------------------
             VanillaRecipeHelper.addShapedRecipe(provider, material.equals(Rubber),
-                    String.format("electric_pump_lv_%s", name), ELECTRIC_PUMP_LV.asStack(), "SXR", "dPw", "RMC", 'S',
+                    String.format("electric_pump_lv_%s", name), ELECTRIC_PUMP_LV.asStack(), "SXR", " P ", "RMC", 'S',
                     new UnificationEntry(screw, Tin), 'X', new UnificationEntry(rotor, Tin), 'P',
                     new UnificationEntry(pipeNormalFluid, Bronze), 'R', new UnificationEntry(ring, material), 'C',
                     new UnificationEntry(cableGtSingle, Tin), 'M', ELECTRIC_MOTOR_LV.asStack());
             VanillaRecipeHelper.addShapedRecipe(provider, material.equals(Rubber),
-                    String.format("electric_pump_mv_%s", name), ELECTRIC_PUMP_MV.asStack(), "SXR", "dPw", "RMC", 'S',
+                    String.format("electric_pump_mv_%s", name), ELECTRIC_PUMP_MV.asStack(), "SXR", " P ", "RMC", 'S',
                     new UnificationEntry(screw, Bronze), 'X', new UnificationEntry(rotor, Bronze), 'P',
                     new UnificationEntry(pipeNormalFluid, Steel), 'R', new UnificationEntry(ring, material), 'C',
                     new UnificationEntry(cableGtSingle, Copper), 'M', ELECTRIC_MOTOR_MV.asStack());
             VanillaRecipeHelper.addShapedRecipe(provider, material.equals(Rubber),
-                    String.format("electric_pump_hv_%s", name), ELECTRIC_PUMP_HV.asStack(), "SXR", "dPw", "RMC", 'S',
+                    String.format("electric_pump_hv_%s", name), ELECTRIC_PUMP_HV.asStack(), "SXR", " P ", "RMC", 'S',
                     new UnificationEntry(screw, Steel), 'X', new UnificationEntry(rotor, Steel), 'P',
                     new UnificationEntry(pipeNormalFluid, StainlessSteel), 'R', new UnificationEntry(ring, material),
                     'C', new UnificationEntry(cableGtSingle, Gold), 'M', ELECTRIC_MOTOR_HV.asStack());
             VanillaRecipeHelper.addShapedRecipe(provider, material.equals(Rubber),
-                    String.format("electric_pump_ev_%s", name), ELECTRIC_PUMP_EV.asStack(), "SXR", "dPw", "RMC", 'S',
+                    String.format("electric_pump_ev_%s", name), ELECTRIC_PUMP_EV.asStack(), "SXR", " P ", "RMC", 'S',
                     new UnificationEntry(screw, StainlessSteel), 'X', new UnificationEntry(rotor, StainlessSteel), 'P',
                     new UnificationEntry(pipeNormalFluid, Titanium), 'R', new UnificationEntry(ring, material), 'C',
                     new UnificationEntry(cableGtSingle, Aluminium), 'M', ELECTRIC_MOTOR_EV.asStack());
             if (!material.equals(Rubber))
                 VanillaRecipeHelper.addShapedRecipe(provider, material.equals(SiliconeRubber),
-                        String.format("electric_pump_iv_%s", name), ELECTRIC_PUMP_IV.asStack(), "SXR", "dPw", "RMC",
+                        String.format("electric_pump_iv_%s", name), ELECTRIC_PUMP_IV.asStack(), "SXR", " P ", "RMC",
                         'S', new UnificationEntry(screw, TungstenSteel), 'X',
                         new UnificationEntry(rotor, TungstenSteel), 'P',
                         new UnificationEntry(pipeNormalFluid, TungstenSteel), 'R', new UnificationEntry(ring, material),

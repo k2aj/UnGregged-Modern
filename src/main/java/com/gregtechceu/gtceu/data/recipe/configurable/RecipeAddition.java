@@ -118,11 +118,6 @@ public class RecipeAddition {
                     'B', GTItems.FIRECLAY_BRICK.asStack(),
                     'G', new UnificationEntry(dust, Gypsum),
                     'C', new ItemStack(Concrete.getBucket()));
-
-            VanillaRecipeHelper.addShapelessRecipe(provider, "compressed_clay", COMPRESSED_CLAY.asStack(),
-                    WOODEN_FORM_BRICK.asStack(), new ItemStack(Items.CLAY_BALL));
-            VanillaRecipeHelper.addSmeltingRecipe(provider, "brick_from_compressed_clay", COMPRESSED_CLAY.asStack(),
-                    new ItemStack(Items.BRICK), 0.3f);
         } else {
             VanillaRecipeHelper.addShapedRecipe(provider, "casing_primitive_bricks",
                     GTBlocks.CASING_PRIMITIVE_BRICKS.asStack(),
@@ -1087,7 +1082,7 @@ public class RecipeAddition {
     }
 
     private static void removeVanillaBlockRecipes(Consumer<FinishedRecipe> provider) {
-        VanillaRecipeHelper.addShapedRecipe(provider, "stone_slab_saw", new ItemStack(Blocks.STONE_SLAB), "sS", 'S',
+        /*VanillaRecipeHelper.addShapedRecipe(provider, "stone_slab_saw", new ItemStack(Blocks.STONE_SLAB), "sS", 'S',
                 new ItemStack(Blocks.STONE));
         VanillaRecipeHelper.addShapedRecipe(provider, "smooth_stone_slab_saw", new ItemStack(Blocks.SMOOTH_STONE_SLAB),
                 "sS", 'S', new ItemStack(Blocks.SMOOTH_STONE));
@@ -1162,7 +1157,7 @@ public class RecipeAddition {
         VanillaRecipeHelper.addShapedRecipe(provider, "prismarine_brick_slab_saw",
                 new ItemStack(Blocks.PRISMARINE_BRICK_SLAB), "sS", 'S', new ItemStack(Blocks.PRISMARINE_BRICKS));
         VanillaRecipeHelper.addShapedRecipe(provider, "dark_prismarine_slab_saw",
-                new ItemStack(Blocks.DARK_PRISMARINE_SLAB), "sS", 'S', new ItemStack(Blocks.DARK_PRISMARINE));
+                new ItemStack(Blocks.DARK_PRISMARINE_SLAB), "sS", 'S', new ItemStack(Blocks.DARK_PRISMARINE));*/
     }
 
     private static void createShovelRecipe(Consumer<FinishedRecipe> provider, String regName, ItemStack output,

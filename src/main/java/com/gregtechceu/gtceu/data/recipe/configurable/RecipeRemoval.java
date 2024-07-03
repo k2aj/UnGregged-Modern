@@ -101,7 +101,6 @@ public class RecipeRemoval {
     }
 
     private static void harderBrickRecipes(Consumer<ResourceLocation> registry) {
-        registry.accept(new ResourceLocation("minecraft:brick"));
         registry.accept(new ResourceLocation("minecraft:bricks"));
         registry.accept(new ResourceLocation("minecraft:nether_brick"));
     }
@@ -232,13 +231,7 @@ public class RecipeRemoval {
     private static void hardGlassRecipes(Consumer<ResourceLocation> registry) {
         registry.accept(new ResourceLocation("minecraft:glass"));
         registry.accept(new ResourceLocation("minecraft:glass_bottle"));
-        registry.accept(new ResourceLocation("minecraft:glass_pane"));
-        for (DyeColor color : DyeColor.values()) {
-            registry.accept(new ResourceLocation(String.format("minecraft:%s_stained_glass_pane_from_glass_pane",
-                    color.name().toLowerCase(Locale.ROOT))));
-            registry.accept(new ResourceLocation(
-                    String.format("minecraft:%s_stained_glass_pane", color.name().toLowerCase(Locale.ROOT))));
-        }
+        // DO NOT remove recipes for glass panes & colored glass.
     }
 
     private static void nerfPaperCrafting(Consumer<ResourceLocation> registry) {
@@ -306,7 +299,7 @@ public class RecipeRemoval {
         registry.accept(new ResourceLocation("minecraft:sea_lantern"));
 
         // Slab replacement
-        registry.accept(new ResourceLocation("minecraft:stone_slab"));
+        /*registry.accept(new ResourceLocation("minecraft:stone_slab"));
         registry.accept(new ResourceLocation("minecraft:smooth_stone_slab"));
         registry.accept(new ResourceLocation("minecraft:andesite_slab"));
         registry.accept(new ResourceLocation("minecraft:granite_slab"));
@@ -342,6 +335,6 @@ public class RecipeRemoval {
         registry.accept(new ResourceLocation("minecraft:end_stone_brick_slab"));
         registry.accept(new ResourceLocation("minecraft:prismarine_slab"));
         registry.accept(new ResourceLocation("minecraft:prismarine_brick_slab"));
-        registry.accept(new ResourceLocation("minecraft:dark_prismarine_slab"));
+        registry.accept(new ResourceLocation("minecraft:dark_prismarine_slab"));*/
     }
 }

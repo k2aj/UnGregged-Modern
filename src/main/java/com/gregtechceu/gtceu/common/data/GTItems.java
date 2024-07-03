@@ -262,15 +262,6 @@ public class GTItems {
             .lang("Coke Oven Brick")
             .onRegister(compassNode(GTCompassSections.MISC))
             .onRegister(materialInfo(new ItemMaterialInfo(new MaterialStack(GTMaterials.Clay, GTValues.M)))).register();
-    public static ItemEntry<Item> WOODEN_FORM_EMPTY = REGISTRATE.item("empty_wooden_form", Item::new)
-            .lang("Empty Wooden Form")
-            .onRegister(compassNode(GTCompassSections.MISC)).register();
-    public static ItemEntry<ComponentItem> WOODEN_FORM_BRICK = REGISTRATE
-            .item("brick_wooden_form", ComponentItem::create)
-            .lang("Brick Wooden Form")
-            .properties(p -> p.stacksTo(1))
-            .onRegister(compassNode(GTCompassSections.MISC))
-            .onRegister(attach((IRecipeRemainder) ItemStack::copy)).register();
 
     public static ItemEntry<Item> SHAPE_EMPTY = REGISTRATE.item("empty_mold", Item::new)
             .lang("Empty Mold")

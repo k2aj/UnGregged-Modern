@@ -468,10 +468,6 @@ public class WoodMachineRecipes {
                         "PPP", 'P', entry.planks);
             }
 
-            // plank -> slab crafting
-            VanillaRecipeHelper.addShapedRecipe(provider, name + "_slab_saw", new ItemStack(entry.slab, 2),
-                    "sS", 'S', entry.planks);
-
             // plank -> slab cutting
             CUTTER_RECIPES.recipeBuilder(name + "_slab")
                     .inputItems(entry.planks)

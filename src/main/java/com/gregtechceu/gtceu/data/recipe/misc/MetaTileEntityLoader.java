@@ -392,7 +392,7 @@ public class MetaTileEntityLoader {
                 new UnificationEntry(TagPrefix.gearSmall, GTMaterials.Darmstadtium));
 
         VanillaRecipeHelper.addShapedRecipe(provider, true, "maintenance_hatch", GTMachines.MAINTENANCE_HATCH.asStack(),
-                "dwx", "hHc", "fsr", 'H', GTMachines.HULL[GTValues.LV].asStack());
+                "h", "H", 'H', GTMachines.HULL[GTValues.LV].asStack());
         VanillaRecipeHelper.addShapedRecipe(provider, true, "maintenance_hatch_configurable",
                 GTMachines.CONFIGURABLE_MAINTENANCE_HATCH.asStack(), "   ", "CMC", "VHV", 'C',
                 CIRCUIT.getIngredient(HV), 'M', GTMachines.MAINTENANCE_HATCH.asStack(), 'V', CONVEYOR.getIngredient(HV),
@@ -591,13 +591,13 @@ public class MetaTileEntityLoader {
                 new UnificationEntry(TagPrefix.cableGtSingle, GTMaterials.HSSG), 'G',
                 new UnificationEntry(TagPrefix.gear, GTMaterials.TungstenSteel));
         VanillaRecipeHelper.addShapedRecipe(provider, true, "engine_intake_casing",
-                GTBlocks.CASING_ENGINE_INTAKE.asStack(ConfigHolder.INSTANCE.recipes.casingsPerCraft), "PhP", "RFR",
-                "PwP", 'R', new UnificationEntry(TagPrefix.rotor, GTMaterials.Titanium), 'F',
+                GTBlocks.CASING_ENGINE_INTAKE.asStack(ConfigHolder.INSTANCE.recipes.casingsPerCraft), "PPP", "RFR",
+                "PPP", 'R', new UnificationEntry(TagPrefix.rotor, GTMaterials.Titanium), 'F',
                 GTBlocks.CASING_TITANIUM_STABLE.asStack(), 'P',
                 new UnificationEntry(TagPrefix.pipeNormalFluid, GTMaterials.Titanium));
         VanillaRecipeHelper.addShapedRecipe(provider, true, "extreme_engine_intake_casing",
-                GTBlocks.CASING_EXTREME_ENGINE_INTAKE.asStack(ConfigHolder.INSTANCE.recipes.casingsPerCraft), "PhP",
-                "RFR", "PwP", 'R', new UnificationEntry(TagPrefix.rotor, GTMaterials.TungstenSteel), 'F',
+                GTBlocks.CASING_EXTREME_ENGINE_INTAKE.asStack(ConfigHolder.INSTANCE.recipes.casingsPerCraft), "PPP",
+                "RFR", "PPP", 'R', new UnificationEntry(TagPrefix.rotor, GTMaterials.TungstenSteel), 'F',
                 GTBlocks.CASING_TUNGSTENSTEEL_ROBUST.asStack(), 'P',
                 new UnificationEntry(TagPrefix.pipeNormalFluid, GTMaterials.TungstenSteel));
         VanillaRecipeHelper.addShapedRecipe(provider, true, "multi_furnace", GTMachines.MULTI_SMELTER.asStack(), "PPP",
